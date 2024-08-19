@@ -99,8 +99,8 @@ loadScripts(document, 'script');</script>
 <h2>Method Summary</h2>
 <div id="method-summary-table">
 <div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab1" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab1', 3)" class="table-tab">Static Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button></div>
-<div id="method-summary-table.tabpanel" role="tabpanel">
-<div class="summary-table three-column-summary" aria-labelledby="method-summary-table-tab0">
+<div id="method-summary-table.tabpanel" role="tabpanel" aria-labelledby="method-summary-table-tab0">
+<div class="summary-table three-column-summary">
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
@@ -111,22 +111,26 @@ loadScripts(document, 'script');</script>
 <div class="block">Finds the (unsigned) minimum difference between two angles including calculating across 0.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static double</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#StepTowards(double,double,double)" class="member-name-link">StepTowards</a><wbr>(double&nbsp;current,
- double&nbsp;target,
- double&nbsp;stepsize)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Steps a value towards a target with a specified step size.</div>
-</div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#rotateToPose(edu.wpi.first.math.geometry.Pose2d,edu.wpi.first.math.geometry.Pose2d)" class="member-name-link">rotateToPose</a><wbr>(edu.wpi.first.math.geometry.Pose2d&nbsp;pose1,
+ edu.wpi.first.math.geometry.Pose2d&nbsp;pose2)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static double</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#StepTowardsCircular(double,double,double)" class="member-name-link">StepTowardsCircular</a><wbr>(double&nbsp;current,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#StepTowards(double,double,double)" class="member-name-link">StepTowards</a><wbr>(double&nbsp;current,
  double&nbsp;target,
  double&nbsp;stepsize)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Steps a value (angle) towards a target (angle) taking the shortest path with a specified step size.</div>
+<div class="block">Steps a value towards a target with a specified step size.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static double</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#WrapAngle(double)" class="member-name-link">WrapAngle</a><wbr>(double&nbsp;angle)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#StepTowardsCircular(double,double,double)" class="member-name-link">StepTowardsCircular</a><wbr>(double&nbsp;current,
+ double&nbsp;target,
+ double&nbsp;stepsize)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Steps a value (angle) towards a target (angle) taking the shortest path with a specified step size.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static double</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#WrapAngle(double)" class="member-name-link">WrapAngle</a><wbr>(double&nbsp;angle)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Wraps an angle until it lies within the range from 0 to 2*PI (exclusive).</div>
 </div>
 </div>
@@ -175,6 +179,13 @@ loadScripts(document, 'script');</script>
 <dt>Returns:</dt>
 <dd>The new value for `current` after performing the specified step towards the specified target.</dd>
 </dl>
+</section>
+</li>
+<li>
+<section class="detail" id="rotateToPose(edu.wpi.first.math.geometry.Pose2d,edu.wpi.first.math.geometry.Pose2d)">
+<h3>rotateToPose</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">double</span>&nbsp;<span class="element-name">rotateToPose</span><wbr><span class="parameters">(edu.wpi.first.math.geometry.Pose2d&nbsp;pose1,
+ edu.wpi.first.math.geometry.Pose2d&nbsp;pose2)</span></div>
 </section>
 </li>
 <li>
